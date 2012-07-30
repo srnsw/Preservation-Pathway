@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:util="urn:jsptagdir:/WEB-INF/tags/util" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <c:choose>
+        <c:when test="${pathway.deprecated}">
+            <util:fieldset id="show_title" title="Preservation Pathway (deprecated)">
+                <field:display field="input_format" id="s_au_gov_nsw_records_digitalarchive_model_Pathway_input_format" object="${pathway}" pronomLink="true" z="user-managed"/>
+                <field:display field="input_format_desc" id="s_au_gov_nsw_records_digitalarchive_model_Pathway_input_format_desc" object="${pathway}" z="user-managed"/>
+                <field:display field="preservation_tool" id="s_au_gov_nsw_records_digitalarchive_model_Pathway_preservation_tool" object="${pathway}" pronomLink="true" z="user-managed"/>
+                <field:display field="preservation_tool_desc" id="s_au_gov_nsw_records_digitalarchive_model_Pathway_preservation_tool_desc" object="${pathway}" z="user-managed"/>
+                <field:display field="target_format" id="s_au_gov_nsw_records_digitalarchive_model_Pathway_target_format" object="${pathway}" pronomLink="true" z="user-managed"/>
+                <field:display field="target_format_desc" id="s_au_gov_nsw_records_digitalarchive_model_Pathway_target_format_desc" object="${pathway}" z="user-managed"/>
+                <field:display field="author" id="s_au_gov_nsw_records_digitalarchive_model_Pathway_author" object="${pathway}" z="user-managed"/>
+                <field:display field="purpose" id="s_au_gov_nsw_records_digitalarchive_model_Pathway_purpose" object="${pathway}" z="user-managed"/>
+                <field:display date="true" dateTimePattern="${pathway_creation_date_date_format}" field="creation_date" id="s_au_gov_nsw_records_digitalarchive_model_Pathway_creation_date" object="${pathway}" z="user-managed"/>
+                <field:display field="description" id="c_au_gov_nsw_records_digitalarchive_model_Pathway_description" object="${pathway}" z="user-managed"/>
+                <field:display field="external_pathway" id="c_au_gov_nsw_records_digitalarchive_model_Pathway_external_pathway" object="${pathway}" z="user-managed"/>
+                <field:display field="deprecated" id="c_au_gov_nsw_records_digitalarchive_model_Pathway_deprecated" object="${pathway}" z="user-managed"/>
+                <field:display field="deprecation_desc" id="c_au_gov_nsw_records_digitalarchive_model_Pathway_deprecation_desc" object="${pathway}" z="user-managed"/>
+                <field:display field="superseded_by" id="c_au_gov_nsw_records_digitalarchive_model_Pathway_superseded_by" object="${pathway}" z="user-managed"/>
+            </util:fieldset>
+        </c:when>
+        <c:otherwise>
+            <form:update id="fu_au_gov_nsw_records_digitalarchive_model_Pathway" modelAttribute="pathway" path="/pathways" versionField="Version" z="YKrs2cpKnsdiP/wKEKd80VBqtfU=">
+                <util:fieldset id="show_title" title="Preservation Pathway">
+                    <field:display field="input_format" id="s_au_gov_nsw_records_digitalarchive_model_Pathway_input_format" object="${pathway}" pronomLink="true" z="user-managed"/>
+                    <field:display field="input_format_desc" id="s_au_gov_nsw_records_digitalarchive_model_Pathway_input_format_desc" object="${pathway}" z="user-managed"/>
+                    <field:display field="preservation_tool" id="s_au_gov_nsw_records_digitalarchive_model_Pathway_preservation_tool" object="${pathway}" pronomLink="true" z="user-managed"/>
+                    <field:display field="preservation_tool_desc" id="s_au_gov_nsw_records_digitalarchive_model_Pathway_preservation_tool_desc" object="${pathway}" z="user-managed"/>
+                    <field:display field="target_format" id="s_au_gov_nsw_records_digitalarchive_model_Pathway_target_format" object="${pathway}" pronomLink="true" z="user-managed"/>
+                    <field:display field="target_format_desc" id="s_au_gov_nsw_records_digitalarchive_model_Pathway_target_format_desc" object="${pathway}" z="user-managed"/>
+                    <field:display field="author" id="s_au_gov_nsw_records_digitalarchive_model_Pathway_author" object="${pathway}" z="user-managed"/>
+                    <field:display field="purpose" id="s_au_gov_nsw_records_digitalarchive_model_Pathway_purpose" object="${pathway}" z="user-managed"/>
+                    <field:display date="true" dateTimePattern="${pathway_creation_date_date_format}" field="creation_date" id="s_au_gov_nsw_records_digitalarchive_model_Pathway_creation_date" object="${pathway}" z="user-managed"/>
+                </util:fieldset>
+                <util:fieldset id="update_title" title="Update Preservation Pathway">
+                    <field:textarea field="description" id="c_au_gov_nsw_records_digitalarchive_model_Pathway_description" z="user-managed"/>
+                    <field:textarea field="external_pathway" id="c_au_gov_nsw_records_digitalarchive_model_Pathway_external_pathway" z="user-managed"/>
+                    <field:checkbox field="deprecated" id="c_au_gov_nsw_records_digitalarchive_model_Pathway_deprecated" z="ruUPtAKlOOHmOpNPwCUgWRSsaZg="/>
+                    <field:textarea field="deprecation_desc" id="c_au_gov_nsw_records_digitalarchive_model_Pathway_deprecation_desc" z="3wk56eHCCRHaxbBwtR34A1GI7Bg="/>
+                    <field:select disableFormBinding="true" emptyLabel=" " emptyValueEnable="true" field="superseded_by" id="c_au_gov_nsw_records_digitalarchive_model_Pathway_superseded_by" itemValue="id" items="${pathways}" path="/pathways" z="user-managed"/>
+                    <field:simpleinput field="preservation_class" id="c_au_gov_nsw_records_digitalarchive_model_Pathway_preservation_class"/>
+                </util:fieldset>
+                <!-- automatic population -->
+                <field:input field="input_format" id="c_au_gov_nsw_records_digitalarchive_model_Pathway_input_format" max="10" min="4" render="false" required="true" z="user-managed"/>
+                <field:input field="input_format_desc" id="c_au_gov_nsw_records_digitalarchive_model_Pathway_input_format_desc" render="false" z="user-managed"/>
+                <field:input field="preservation_tool" id="c_au_gov_nsw_records_digitalarchive_model_Pathway_preservation_tool" max="10" min="4" render="false" required="true" z="user-managed"/>
+                <field:input field="preservation_tool_desc" id="c_au_gov_nsw_records_digitalarchive_model_Pathway_preservation_tool_desc" render="false" z="user-managed"/>
+                <field:input field="target_format" id="c_au_gov_nsw_records_digitalarchive_model_Pathway_target_format" max="10" min="4" render="false" required="true" z="user-managed"/>
+                <field:input field="target_format_desc" id="c_au_gov_nsw_records_digitalarchive_model_Pathway_target_format_desc" render="false" z="user-managed"/>
+                <field:input field="author" id="c_au_gov_nsw_records_digitalarchive_model_Pathway_author" render="false" z="user-managed"/>
+                <field:datetime dateTimePattern="${pathway_deprecation_date_date_format}" field="deprecation_date" id="c_au_gov_nsw_records_digitalarchive_model_Pathway_deprecation_date" render="false" z="user-managed"/>
+                <field:datetime dateTimePattern="${pathway_creation_date_date_format}" field="creation_date" id="c_au_gov_nsw_records_digitalarchive_model_Pathway_creation_date" render="false" z="user-managed"/>
+                <field:select field="purpose" id="c_au_gov_nsw_records_digitalarchive_model_Pathway_purpose" itemValue="id" items="${purposes}" path="/purposes" render="false" z="user-managed"/>
+                <field:input field="deprecated_by" id="c_au_gov_nsw_records_digitalarchive_model_Pathway_deprecated_by" render="false" z="user-managed"/>
+                <!-- end automatic population -->
+            </form:update>
+        </c:otherwise>
+    </c:choose>
+</div>

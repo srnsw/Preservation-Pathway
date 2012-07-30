@@ -1,0 +1,145 @@
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-04-16 10:13:14
+project --topLevelPackage au.gov.nsw.records.digitalarchive --projectName PreservationPath --java 6 --packaging WAR
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-04-16 10:13:14
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-04-16 10:17:51
+persistence setup --database MYSQL --provider HIBERNATE --databaseName mydb --userName root
+// [failed] entity jpa --class ~.model.Path --testAutomatically 
+entity jpa --class ~.model.Entry --testAutomatically 
+field boolean --fieldName deprecated --notNull false
+field string --fieldName input_format
+field string --fieldName preservation_tool
+field string --fieldName preservation_tool_info
+field string --fieldName preservation_class
+field string --fieldName target_format
+web mvc setup
+hint
+web mvc scaffold --class ~.web.EntryController
+logging setup --level DEBUG 
+// [failed] field boolean --fieldName deprecated --notNull --value false
+security setup
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-04-17 09:07:58
+entity jpa --class ~.model.Pathway
+field boolean --fieldName deprecated --notNull true --value false
+field string --fieldName input_format --notNull true
+field string --fieldName preservation_tool
+field string --fieldName preservation_tool_info
+field string --fieldName author
+field string --fieldName target_format
+field string --fieldName description
+field string --fieldName pronom_pathway
+web mvc scaffold --class ~.web.PathwayController
+// [failed] web mvc scaffold --class ~.web.PathwayController
+entity jpa --class ~.model.Pathway
+field string --fieldName input_format --notNull true
+// [failed] web mvc scaffold --class ~.web.PathwayController
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-04-17 10:14:24
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-04-17 10:14:52
+help
+help
+help security
+entity jpa --class ~.model.Pathway
+field date --fieldName creation_date --type java.util.Date
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-04-18 08:13:42
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-04-18 15:25:19
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-04-19 08:19:13
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-04-19 12:53:04
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-04-20 14:33:05
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-04-23 08:55:10
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-04-23 09:10:57
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-04-23 09:34:06
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-04-23 10:52:38
+entity jpa --class ~.model.ExternalPathway
+field string --fieldName name --notNull 1
+field string --fieldName url --notNull 1
+focus --class ~.model.Pathway
+field set --fieldName external_pathway --type ~.model.ExternalPathway --cardinality ONE_TO_MANY --mappedBy pathway
+focus --class ~.model.ExternalPathway
+field reference --fieldName pathway --type ~.model.Pathway --cardinality MANY_TO_ONE 
+controller scaffold --entity ~.model.ExternalPathway --class ~.web.ExternalPathwayController
+focus --class ~.model.Pathway
+entity jpa --class ~.model.Purpose
+field string --fieldName name --notNull 1
+focus --class ~.model.Pathway
+// [failed] field set --fieldName purpose --type ~.model.Purpose --cardinality MANY_TO_ONE 
+focus --class ~.model.Purpose 
+controller scaffold --entity ~.model.Purpose --class ~.web.PurposeController
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-04-24 08:22:49
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-04-24 08:24:41
+focus --class ~.model.Pathway
+// [failed] field string --fieldName deprecation_description
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-04-24 08:32:17
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-04-24 08:32:34
+focus --class ~.model.Pathway
+field string --fieldName deprecation_description
+field reference --fieldName superseded_by --type ~.model.Pathway
+entity jpa --class ~.model.Purpose 
+field string --fieldName name --notNull 1
+focus --class ~.model.Pathway
+// [failed] field set --fieldName purpose --type ~.model.Purpose --cardinality MANY_TO_ONE  --mappedBy pathway
+controller scaffold --entity ~.model.Purpose --class ~.web.PurposeController
+finder list --class ~.model.Pathway 
+finder add --finderName findPathwaysByInput_format_descLike
+finder add --finderName findPathwaysByInput_format_descLike
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-04-24 16:30:12
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-05-08 09:36:50
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-05-08 09:58:14
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-05-08 09:58:33
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-05-08 10:07:11
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-05-08 10:07:26
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-05-08 13:25:55
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-05-08 13:33:25
+finder list --class ~.model.Pathway --depth 1
+finder list --class ~.model.Pathway --depth 2
+finder add --finderName findPathwaysByInput_format_descLikeAndTarget_format_descLike
+hint finder
+help finder
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-05-08 14:53:16
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-05-08 14:53:29
+// [failed] perform package
+// [failed] perform package ROOT.war
+// [failed] perform package 
+// [failed] perform package
+// [failed] perform package
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-05-09 12:13:44
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-05-09 12:37:15
+// [failed] perform package
+// [failed] perform package
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-05-09 12:46:11
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-05-09 12:46:33
+// [failed] perform package
+// [failed] perform package
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-05-09 12:48:45
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-05-09 12:49:05
+perform package
+perform package
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-05-09 12:49:48
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-05-09 12:50:06
+perform package
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-05-09 12:52:39
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-05-09 12:53:03
+perform package
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-05-09 12:53:27
+perform package
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-05-09 16:27:51
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-05-10 09:12:03
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-05-10 10:24:08
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-05-11 08:20:43
+perform package
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-05-11 08:50:59
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-05-11 14:51:55
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-05-11 14:52:28
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-05-14 09:48:59
+! dir
+! ls
+! pwd
+! ls
+! cat
+! 0
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-05-14 14:49:18
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-06-05 08:16:01
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-06-05 08:17:05
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-06-05 08:18:38
+finder list --class ~.model.Pathway 
+web mvc controller --class ~.web.LookupController
+finder list 
+entity jpa --class ~.model.Purpose

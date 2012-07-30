@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_au_gov_nsw_records_digitalarchive_model_Purpose" items="${purposes}" z="7AZHym6PngR7xI3lLa1xqQhGbEk=">
+        <table:table data="${purposes}" id="l_au_gov_nsw_records_digitalarchive_model_Purpose" path="/purposes" z="ZZZ1DuEN+x3bI1xZO63Uqu0MiUE=">
+            <table:column id="c_au_gov_nsw_records_digitalarchive_model_Purpose_name" property="name" z="8TY6kEoto03GHqpSr62cDFL3t2Y="/>
+        </table:table>
+    </page:list>
+</div>

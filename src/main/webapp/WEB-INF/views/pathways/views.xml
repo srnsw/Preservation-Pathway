@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+    <definition extends="default" name="pathways/list">
+        <put-attribute name="body" value="/WEB-INF/views/pathways/list.jspx"/>
+    </definition>
+<definition extends="default" name="pathways/show">
+        <put-attribute name="body" value="/WEB-INF/views/pathways/show.jspx"/>
+    </definition>
+<definition extends="default" name="pathways/create">
+        <put-attribute name="body" value="/WEB-INF/views/pathways/create.jspx"/>
+    </definition>
+<definition extends="default" name="pathways/update">
+        <put-attribute name="body" value="/WEB-INF/views/pathways/update.jspx"/>
+    </definition>
+<definition extends="default" name="pathways/findPathwaysByInput_format_descLikeAndTarget_format_descLike">
+    		<put-attribute name="body" value="/WEB-INF/views/pathways/findPathwaysByInput_format_descLikeAndTarget_format_descLike.jspx"/>
+		</definition>
+</tiles-definitions>

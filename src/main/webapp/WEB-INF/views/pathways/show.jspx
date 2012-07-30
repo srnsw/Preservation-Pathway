@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:sc="http://www.springframework.org/security/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <c:set value="false" var="updateable"/>
+    <sc:authorize access="isAuthenticated()">
+        <c:set value="true" var="updateable"/>
+    </sc:authorize>
+    <page:show create="false" delete="false" id="ps_au_gov_nsw_records_digitalarchive_model_Pathway" list="false" object="${pathway}" path="/pathways" update="${updateable}" z="user-managed">
+        <field:display field="input_format" id="s_au_gov_nsw_records_digitalarchive_model_Pathway_input_format" object="${pathway}" pronomLink="true" z="user-managed"/>
+        <field:display field="input_format_desc" id="s_au_gov_nsw_records_digitalarchive_model_Pathway_input_format_desc" object="${pathway}" z="user-managed"/>
+        <field:display field="target_format" id="s_au_gov_nsw_records_digitalarchive_model_Pathway_target_format" object="${pathway}" pronomLink="true" z="user-managed"/>
+        <field:display field="target_format_desc" id="s_au_gov_nsw_records_digitalarchive_model_Pathway_target_format_desc" object="${pathway}" z="GsxjkJQAOyWFMyQcQQVKwMbroR8="/>
+        <field:display field="preservation_tool" id="s_au_gov_nsw_records_digitalarchive_model_Pathway_preservation_tool" object="${pathway}" pronomLink="true" z="user-managed"/>
+        <field:display field="preservation_tool_desc" id="s_au_gov_nsw_records_digitalarchive_model_Pathway_preservation_tool_desc" object="${pathway}" z="nSk47Mf5WG0lhX86VVPJ40nicV8="/>
+        <field:display field="description" id="s_au_gov_nsw_records_digitalarchive_model_Pathway_description" object="${pathway}" z="khb3LA0XulIoP3SzLAm37N9HZ00="/>
+        <field:display field="external_pathway" htmlLink="true" id="s_au_gov_nsw_records_digitalarchive_model_Pathway_external_pathway" object="${pathway}" z="user-managed"/>
+        <field:display field="purpose" id="s_au_gov_nsw_records_digitalarchive_model_Pathway_purpose" object="${pathway}" z="BQlMxkaqZHds/VyHAP1I/fL1Lvc="/>
+        <field:display field="preservation_class" id="s_au_gov_nsw_records_digitalarchive_model_Pathway_preservation_class" object="${pathway}" render="false" z="user-managed"/>
+        <field:display field="author" id="s_au_gov_nsw_records_digitalarchive_model_Pathway_author" object="${pathway}" z="MIuuO1NkENbla1j83VBYFLcXeVk="/>
+        <field:display date="true" dateTimePattern="${pathway_creation_date_date_format}" field="creation_date" id="s_au_gov_nsw_records_digitalarchive_model_Pathway_creation_date" object="${pathway}" z="TwDt1j4xiPqlr1ZapIj0N3G3wWM="/>
+        <field:display field="deprecated" id="s_au_gov_nsw_records_digitalarchive_model_Pathway_deprecated" object="${pathway}" z="TGc1PS38i/HsrBN8zZCiXwgDFOw="/>
+        <field:display field="deprecation_desc" id="s_au_gov_nsw_records_digitalarchive_model_Pathway_deprecation_desc" object="${pathway}" z="c5Xdb42X5gfdl+RzZ1u8KVjyGeE="/>
+        <field:display date="true" dateTimePattern="${pathway_deprecation_date_date_format}" field="deprecation_date" id="s_au_gov_nsw_records_digitalarchive_model_Pathway_deprecation_date" object="${pathway}" z="/4bMZ5LjwYsuOugzwxP8NkEl8dU="/>
+        <field:display field="superseded_by" id="s_au_gov_nsw_records_digitalarchive_model_Pathway_superseded_by" object="${pathway}" z="aAp6dRHilAvzkKDai0QVGfhWM3s="/>
+        <field:display field="deprecated_by" id="s_au_gov_nsw_records_digitalarchive_model_Pathway_deprecated_by" object="${pathway}" z="9Uep5JGLXn18Znq+XupaBOHcJ0Y="/>
+    </page:show>
+</div>

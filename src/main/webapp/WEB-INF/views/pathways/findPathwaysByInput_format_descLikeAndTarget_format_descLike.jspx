@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:find finderName="ByInput_format_descLikeAndTarget_format_descLike" id="ff_au_gov_nsw_records_digitalarchive_model_Pathway" path="/pathways" z="N8sz5cOX3oeg+1yI5wQNU8+NMq4=">
+        <field:input disableFormBinding="true" field="input_format_desc" id="f_au_gov_nsw_records_digitalarchive_model_Pathway_Input_format_desc" required="true" z="32wmhRGu8SBDHTeniI5iJEmugOE="/>
+        <field:input disableFormBinding="true" field="target_format_desc" id="f_au_gov_nsw_records_digitalarchive_model_Pathway_Target_format_desc" required="true" z="98b2BIiWlZKdUFqAjmy51h41k40="/>
+    </form:find>
+</div>

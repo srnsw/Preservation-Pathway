@@ -1,13 +1,8 @@
-# Digital Archives Metadata Registry
+# Digital Archives Preservation Pathways Registry
 
-The Digital Archives Metadata Registry is a publicly accessible web service capable of:
+This application records preferences for file format conversion operations. Basically, a recommendation to turn an input file with X PUID (using IDs from the National Archives PRONOM registry - http://www.nationalarchives.gov.uk/PRONOM/Default.aspx) into the format defined by Y PUID. Preferences can be registered for different purposes e.g. for “access” purposes we might recommend DOC->PDF, but for “preservation” purposes we might suggest DOC->ODF (just an example, not an actual policy in the registry). 
 
-- allowing Digital Archives staff to progressively register preferences for published metadata terms (e.g. Dublin Core) to represent common metadata elements in the digital archives
-- allowing Digital Archives staff to progressively coin new terms (by providing a URI and description) to represent metadata elements in the digital archives for which no suitable published term can be identified
-- informing NSW government agencies wishing to transfer digital archives of State Records' metadata preferences
-- informing users accessing the digital archives of the full set of searchable metadata fields in the system
-- providing a 'best practice' reference for NSW government agencies wishing to standardise metadata used in agency recordkeeping systems
-- providing a useful resource for the digital preservation and recordkeeping communities.
+Available publicly as a handy reference for the NSW jurisdiction (so that an agency that encounters records in a certain format can quickly find State Records NSW’s recommended pathway for that format). It also produces machine readable output (JSON) that the Digital Archives Workflow Controller tool can consume (to automate format conversions where appropriate).
 
 ## Release Date
 
@@ -19,7 +14,7 @@ Copyright (c) State of New South Wales through the State Records Authority of Ne
 
 ## License
 
-Digital Archives Metadata Registry is released under the GNU General Public License (version 3 or later).
+Digital Archives Preservation Pathways Registry is released under the GNU General Public License (version 3 or later).
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -38,6 +33,6 @@ along with this program (see license).  If not, see <http://www.gnu.org/licenses
 
 TO DO
 
-## Run Digital Archives Metadata Registry
+## Run Digital Archives Preservation Pathways Registry
 
 TO DO

@@ -67,10 +67,6 @@ public class PathwayController {
           return "pathways/create";
       }
       
-      // TODO
-      //System.setProperty("http.proxyHost","proxywest");
-  		//System.setProperty("http.proxyPort","8080");
-  		
       uiModel.asMap().clear();
       
       // automatic populate the logged in user as the author

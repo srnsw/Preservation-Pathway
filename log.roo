@@ -143,3 +143,9 @@ finder list --class ~.model.Pathway
 web mvc controller --class ~.web.LookupController
 finder list 
 entity jpa --class ~.model.Purpose
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-07-31 10:30:10
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-07-31 10:35:07
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-07-31 15:58:05
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-08-02 08:46:39
+perform package
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-08-02 16:28:47

@@ -60,6 +60,21 @@
         <property name="minEvictableIdleTimeMillis" value="1800000"/>
         <property name="validationQuery" value="SELECT 1"/>
     </bean>
+    
+    <bean class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close" id="userDataSource">
+        <property name="driverClassName" value="${userdatabase.driverClassName}"/>
+        <property name="url" value="${userdatabase.url}"/>
+        <property name="username" value="${userdatabase.username}"/>
+        <property name="password" value="${userdatabase.password}"/>
+        <property name="testOnBorrow" value="true"/>
+        <property name="testOnReturn" value="true"/>
+        <property name="testWhileIdle" value="true"/>
+        <property name="timeBetweenEvictionRunsMillis" value="1800000"/>
+        <property name="numTestsPerEvictionRun" value="3"/>
+        <property name="minEvictableIdleTimeMillis" value="1800000"/>
+        <property name="validationQuery" value="SELECT 1"/>
+    </bean>
+    
     <bean class="org.springframework.orm.jpa.JpaTransactionManager" id="transactionManager">
         <property name="entityManagerFactory" ref="entityManagerFactory"/>
     </bean>
